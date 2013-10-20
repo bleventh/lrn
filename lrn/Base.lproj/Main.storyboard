@@ -311,7 +311,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Roster"/>
-                                    <segment title="Builder"/>
+                                    <segment title="Decks"/>
                                 </segments>
                                 <connections>
                                     <action selector="rosterSwitchChanged:" destination="Urj-hF-loZ" eventType="valueChanged" id="hjy-uG-JoS"/>
