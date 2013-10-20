@@ -37,6 +37,7 @@
 		CA8AA634181356C700202CDE /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA633181356C700202CDE /* QuizViewController.m */; };
 		CA8AA6371813740300202CDE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA6351813740300202CDE /* Model.xcdatamodeld */; };
 		CAA81767181444B700668989 /* NewClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA81766181444B700668989 /* NewClassViewController.m */; };
+		CAA8176A18144D3B00668989 /* AppStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA8176918144D3B00668989 /* AppStateInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		CA8AA6361813740300202CDE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CAA81765181444B700668989 /* NewClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClassViewController.h; sourceTree = "<group>"; };
 		CAA81766181444B700668989 /* NewClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClassViewController.m; sourceTree = "<group>"; };
+		CAA8176818144D3B00668989 /* AppStateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStateInfo.h; sourceTree = "<group>"; };
+		CAA8176918144D3B00668989 /* AppStateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStateInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				88D52A8418139DB100E36A7F /* StudentQuizResultCell.m */,
 				88D52A891813BB3100E36A7F /* RosterViewController.h */,
 				88D52A8A1813BB3100E36A7F /* RosterViewController.m */,
+				CAA8176818144D3B00668989 /* AppStateInfo.h */,
+				CAA8176918144D3B00668989 /* AppStateInfo.m */,
 				88D52A8D1813C64D00E36A7F /* StudentCollectionViewCell.h */,
 				88D52A8E1813C64D00E36A7F /* StudentCollectionViewCell.m */,
 				88D52A901813D07300E36A7F /* AddStudentViewController.h */,
@@ -338,6 +343,7 @@
 				CA8AA60B18133A7B00202CDE /* AppDelegate.m in Sources */,
 				CA5354841813954D00EBC3D7 /* EntryPointViewController.m in Sources */,
 				CA53547818137BAB00EBC3D7 /* Card.m in Sources */,
+				CAA8176A18144D3B00668989 /* AppStateInfo.m in Sources */,
 				CA8AA6311813499A00202CDE /* Classes.m in Sources */,
 				88D52A921813D07300E36A7F /* AddStudentViewController.m in Sources */,
 				CA8AA60718133A7B00202CDE /* main.m in Sources */,

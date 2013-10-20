@@ -50,7 +50,7 @@
 - (IBAction)popOverMenu:(UIBarButtonItem*)sender {
 
    if (self.classPicker == nil) {
-      //Create the ColorPickerViewController.
+
       self.classPicker = [[Classes alloc] initWithStyle:UITableViewStylePlain];
 
       //Set this VC as the delegate.
@@ -58,7 +58,7 @@
    }
 
    if (self.classPopOver == nil) {
-      //The color picker popover is not showing. Show it.
+
       self.classPopOver = [[UIPopoverController alloc] initWithContentViewController:self.classPicker];
       [self.classPopOver presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                                   permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];

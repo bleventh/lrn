@@ -49,7 +49,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-   [self.classNameTextField resignFirstResponder];
+   [textField resignFirstResponder];
    return YES;
 }
 

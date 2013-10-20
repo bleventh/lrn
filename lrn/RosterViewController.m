@@ -9,6 +9,11 @@
 #import "RosterViewController.h"
 #import "StudentCollectionViewCell.h"
 #import "StudentViewController.h"
+#import "AddStudentViewController.h"
+#import "AppStateInfo.h"
+#import "AppDelegate.h"
+#import "Student.h"
+#import "ClassSch.h"
 
 @interface RosterViewController ()
 
@@ -31,6 +36,7 @@
 	// Do any additional setup after loading the view.
     self.studentCollection.backgroundColor = [UIColor whiteColor];
     self.title = self.thisClass.name;
+   [AppStateInfo setCurrentClass:self.thisClass.name];
    // NSLog(@"This is class %@\n", self.thisClass);
     
     //self.students = [self.thisClass.students allObjects];
@@ -49,6 +55,7 @@
 }
 
 - (IBAction)addStudent:(id)sender {
+   
 }
 
 // Collection
@@ -96,6 +103,11 @@
         cv.student = [[self.thisClass.students allObjects] objectAtIndex:self.selected.row];
         self.selected = NULL;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+
+   [self.studentCollection reloadData];
 }
 
 @end
