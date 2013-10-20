@@ -15,6 +15,7 @@
 		88D52A95181466C500E36A7F /* HorizontalRosterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */; };
 		88D52A9818147AC700E36A7F /* DeckBuilderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */; };
 		88D52A9B18148D9D00E36A7F /* DeckQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */; };
+		88D52A9E1814956B00E36A7F /* HorizontalClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A9D1814956B00E36A7F /* HorizontalClassCell.m */; };
 		CA53547218137BAA00EBC3D7 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547118137BAA00EBC3D7 /* Deck.m */; };
 		CA53547518137BAB00EBC3D7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547418137BAB00EBC3D7 /* Student.m */; };
 		CA53547818137BAB00EBC3D7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547718137BAB00EBC3D7 /* Card.m */; };
@@ -70,6 +71,8 @@
 		88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckBuilderViewController.m; sourceTree = "<group>"; };
 		88D52A9918148D9D00E36A7F /* DeckQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckQuizViewController.h; sourceTree = "<group>"; };
 		88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckQuizViewController.m; sourceTree = "<group>"; };
+		88D52A9C1814956B00E36A7F /* HorizontalClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalClassCell.h; sourceTree = "<group>"; };
+		88D52A9D1814956B00E36A7F /* HorizontalClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalClassCell.m; sourceTree = "<group>"; };
 		CA53547018137BAA00EBC3D7 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		CA53547118137BAA00EBC3D7 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		CA53547318137BAB00EBC3D7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */,
 				88D52A9918148D9D00E36A7F /* DeckQuizViewController.h */,
 				88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */,
+				88D52A9C1814956B00E36A7F /* HorizontalClassCell.h */,
+				88D52A9D1814956B00E36A7F /* HorizontalClassCell.m */,
 			);
 			path = lrn;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				CA53547B18137BAB00EBC3D7 /* ClassSch.m in Sources */,
 				CA53547518137BAB00EBC3D7 /* Student.m in Sources */,
 				CA5354871813A8E100EBC3D7 /* HorizonalTableView.m in Sources */,
+				88D52A9E1814956B00E36A7F /* HorizontalClassCell.m in Sources */,
 				CA8AA60B18133A7B00202CDE /* AppDelegate.m in Sources */,
 				88D52A95181466C500E36A7F /* HorizontalRosterTableCell.m in Sources */,
 				CA5354841813954D00EBC3D7 /* EntryPointViewController.m in Sources */,
