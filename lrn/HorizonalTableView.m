@@ -34,6 +34,8 @@
       self.frame = frame;
 
    }
+   [self setShowsHorizontalScrollIndicator:NO];
+   [self setShowsVerticalScrollIndicator:NO];
 
    assert(self);
    return self;

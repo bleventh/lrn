@@ -11,10 +11,11 @@
 #import "AppDelegate.h"
 #import "RosterViewController.h"
 #import "HorizontalTableCell.h"
+#import "HorizonalTableView.h"
 
 
 @interface EntryPointViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *classPickTableView;
+@property (weak, nonatomic) IBOutlet  HorizonalTableView *classPickTableView;
 
 // This is strong because we keep using it.
 @property (strong, nonatomic) NSArray * classes;
@@ -55,17 +56,6 @@
 
    self.classPickTableView.delegate = self;
    self.classPickTableView.dataSource = self;
-
-    // TODO: Why is this here? it should be in the init of the horizontal table view.
-   const CGFloat k90DegreesCounterClockwiseAngle = (CGFloat) -(90 * M_PI / 180.0);
-
-   CGRect frame = self.classPickTableView.frame;
-   self.classPickTableView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, k90DegreesCounterClockwiseAngle);
-   self.classPickTableView.frame = frame;
-    
-    // This, too.
-   [self.classPickTableView setShowsHorizontalScrollIndicator:NO];
-   [self.classPickTableView setShowsVerticalScrollIndicator:NO];
 
 }
 
