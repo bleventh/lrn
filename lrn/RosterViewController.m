@@ -8,11 +8,13 @@
 
 #import "RosterViewController.h"
 #import "StudentCollectionViewCell.h"
+#import "DeckBuilderViewController.h"
 #import "StudentViewController.h"
 #import "AddStudentViewController.h"
 #import "AppStateInfo.h"
 #import "AppDelegate.h"
 #import "Student.h"
+#import "Deck.h"
 #import "ClassSch.h"
 #import "bouncyCollectionLayout.h"
 
@@ -71,8 +73,11 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    
-    return [[self.thisClass.students allObjects] count];
+    if (self.rosterSwitch.selectedSegmentIndex == 0) {
+        return [[self.thisClass.students allObjects] count];
+    } else {
+        return [[self.thisClass.decks allObjects] count] + 1;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -83,8 +88,18 @@
     [l setMasksToBounds:YES];
     [l setCornerRadius:63.5];
     
-    Student *thisOne = [[self.thisClass.students allObjects] objectAtIndex:indexPath.row];
-    studentCell.studentName.text = [NSString stringWithFormat:@"%@ %@", thisOne.firstName, thisOne.lastName];
+    if (self.rosterSwitch.selectedSegmentIndex == 0) {
+        Student *thisOne = [[self.thisClass.students allObjects] objectAtIndex:indexPath.row];
+        studentCell.studentName.text = [NSString stringWithFormat:@"%@ %@", thisOne.firstName, thisOne.lastName];
+    } else {
+        if (indexPath.row == [[self.thisClass.decks allObjects] count]) {
+            studentCell.studentName.text = @"New deck...";
+        } else {
+            Deck *thisOne = [[self.thisClass.decks allObjects] objectAtIndex:indexPath.row];
+            studentCell.studentName.text = thisOne.name;
+        }
+    }
+    
     return studentCell;
 }
 
@@ -92,7 +107,11 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selected = indexPath;
-    [self performSegueWithIdentifier:@"studentSelected" sender:self];
+    if (self.rosterSwitch.selectedSegmentIndex == 0) {
+        [self performSegueWithIdentifier:@"studentSelected" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"deckSelected" sender:self];
+    }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
@@ -101,9 +120,23 @@
 {
     // Let's only assume we're going to segue to the roster view if we
     // have a destination selected.
-    if (self.selected) {
+    if (self.selected && [segue.identifier isEqualToString:@"studentSelected"]) {
         StudentViewController *cv = segue.destinationViewController;
         cv.student = [[self.thisClass.students allObjects] objectAtIndex:self.selected.row];
+        self.selected = NULL;
+    } else if (self.selected && [segue.identifier isEqualToString:@"deckSelected"]) {
+        DeckBuilderViewController *dbv = segue.destinationViewController;
+        
+        if ([[self.thisClass.decks allObjects] count] > self.selected.row) {
+            // It exists.
+            NSLog(@"It exists already.\n");
+            dbv.thisDeck = [[self.thisClass.decks allObjects] objectAtIndex:self.selected.row];
+        } else {
+            // We need a new one.
+            dbv.thisDeck = NULL;
+            NSLog(@"It needs to be made.\n");
+        }
+        
         self.selected = NULL;
     }
 }
@@ -113,4 +146,7 @@
    [self.studentCollection reloadData];
 }
 
+- (IBAction)rosterSwitchChanged:(id)sender {
+    [self.studentCollection reloadData];
+}
 @end

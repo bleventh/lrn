@@ -18,5 +18,7 @@
 @property (nonatomic, weak) ClassSch *thisClass;
 @property (nonatomic, weak) NSArray *students;
 @property (nonatomic, strong) NSIndexPath *selected;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *rosterSwitch;
+- (IBAction)rosterSwitchChanged:(id)sender;
 
 @end

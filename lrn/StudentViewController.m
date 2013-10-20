@@ -41,6 +41,8 @@
 - (void)updateStudentView
 {
     self.title = self.studentName.text = [NSString stringWithFormat:@"%@ %@", self.student.firstName, self.student.lastName];
+    self.parentInfo.text = [NSString stringWithFormat:@"%@ %@ | %@ | %@", self.student.parentFirstName, self.student.parentLastName, self.student.parentEmail, self.student.parentPhone];
+
     
     //NSLog(@"student %@\n", self.student);
     
