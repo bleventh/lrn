@@ -8,7 +8,9 @@
 
 #import "StudentViewController.h"
 #import "StudentQuizResultCell.h"
+#import "HorizontalRosterTableCell.h"
 #import "Deck.h"
+#import "ClassSch.h"
 
 @interface StudentViewController ()
 
@@ -29,8 +31,15 @@
 {
     [super viewDidLoad];
     [self.quizTable setSeparatorColor:[UIColor whiteColor]];
+    [self.rosterTable setSeparatorColor:[UIColor whiteColor]];
     
 	// Do any additional setup after loading the view.
+   
+    [self updateStudentView];
+}
+
+- (void)updateStudentView
+{
     self.title = self.studentName.text = [NSString stringWithFormat:@"%@ %@", self.student.firstName, self.student.lastName];
     
     //NSLog(@"student %@\n", self.student);
@@ -57,30 +66,55 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{   
-    return 10;
+{
+    if (tableView == self.quizTable) {
+        return 10;
+    } else {
+        return [[self.student.relationship.students allObjects] count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    StudentQuizResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuizOverview"];
-    if (indexPath.row % 2) {
-        cell.quizName.text = @"Letters"; //[[self.quizzes objectAtIndex:indexPath.row] valueForKey:@"name"];
-        cell.quizProgress.progress = 0.60;
-        cell.quizPercent.text = @"60%";
+    if (tableView == self.quizTable) {
+        StudentQuizResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuizOverview"];
+        if (indexPath.row % 2) {
+            cell.quizName.text = @"Letters"; //[[self.quizzes objectAtIndex:indexPath.row] valueForKey:@"name"];
+            cell.quizProgress.progress = 0.60;
+            cell.quizPercent.text = @"60%";
+        } else {
+            cell.quizName.text = @"Animals";
+            cell.quizProgress.progress = .98;
+            cell.quizPercent.text = @"98%";
+        }
+        return cell;
     } else {
-        cell.quizName.text = @"Animals";
-        cell.quizProgress.progress = .98;
-        cell.quizPercent.text = @"98%";
+        HorizontalRosterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HorizontalRoster"];
+        //cell.textLabel.text = @"Hello!";
+        
+        CALayer *l = [cell.studentImage layer];
+        [l setMasksToBounds:YES];
+        [l setCornerRadius:55];
+        
+        //ClassSch *c = self.student.relationship;
+        Student *s = [[self.student.relationship.students allObjects] objectAtIndex:indexPath.row];
+        cell.studentName.text = s.firstName; //[NSString stringWithFormat:@"%@ %@", s.firstName, s.lastName];
+        
+        return cell;
     }
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    // This is where we get the name of the class and switch to appropriate view
+    if (tableView == self.quizTable) {
+        
+    } else {
+        // This is where we get the name of the class and switch to appropriate view
+        self.student = [[self.student.relationship.students allObjects] objectAtIndex:indexPath.row];
+        [self updateStudentView];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

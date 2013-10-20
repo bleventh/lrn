@@ -12,6 +12,7 @@
 		88D52A8B1813BB3100E36A7F /* RosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A8A1813BB3100E36A7F /* RosterViewController.m */; };
 		88D52A8F1813C64D00E36A7F /* StudentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A8E1813C64D00E36A7F /* StudentCollectionViewCell.m */; };
 		88D52A921813D07300E36A7F /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A911813D07300E36A7F /* AddStudentViewController.m */; };
+		88D52A95181466C500E36A7F /* HorizontalRosterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */; };
 		CA53547218137BAA00EBC3D7 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547118137BAA00EBC3D7 /* Deck.m */; };
 		CA53547518137BAB00EBC3D7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547418137BAB00EBC3D7 /* Student.m */; };
 		CA53547818137BAB00EBC3D7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547718137BAB00EBC3D7 /* Card.m */; };
@@ -61,6 +62,8 @@
 		88D52A8E1813C64D00E36A7F /* StudentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCollectionViewCell.m; sourceTree = "<group>"; };
 		88D52A901813D07300E36A7F /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
 		88D52A911813D07300E36A7F /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentViewController.m; sourceTree = "<group>"; };
+		88D52A93181466C500E36A7F /* HorizontalRosterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalRosterTableCell.h; sourceTree = "<group>"; };
+		88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalRosterTableCell.m; sourceTree = "<group>"; };
 		CA53547018137BAA00EBC3D7 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		CA53547118137BAA00EBC3D7 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		CA53547318137BAB00EBC3D7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				88D52A8E1813C64D00E36A7F /* StudentCollectionViewCell.m */,
 				88D52A901813D07300E36A7F /* AddStudentViewController.h */,
 				88D52A911813D07300E36A7F /* AddStudentViewController.m */,
+				88D52A93181466C500E36A7F /* HorizontalRosterTableCell.h */,
+				88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */,
 			);
 			path = lrn;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				CA53547518137BAB00EBC3D7 /* Student.m in Sources */,
 				CA5354871813A8E100EBC3D7 /* HorizonalTableView.m in Sources */,
 				CA8AA60B18133A7B00202CDE /* AppDelegate.m in Sources */,
+				88D52A95181466C500E36A7F /* HorizontalRosterTableCell.m in Sources */,
 				CA5354841813954D00EBC3D7 /* EntryPointViewController.m in Sources */,
 				CA53547818137BAB00EBC3D7 /* Card.m in Sources */,
 				CAA8176A18144D3B00668989 /* AppStateInfo.m in Sources */,

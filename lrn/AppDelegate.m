@@ -17,7 +17,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-   [self create];
+    // THIS POLLUTES COREDATA SOMETHING AWFUL.
+   //[self create];
     return YES;
 }
 							
