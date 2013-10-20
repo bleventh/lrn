@@ -94,6 +94,7 @@
     if (self.selected) {
         StudentViewController *cv = segue.destinationViewController;
         cv.student = [[self.thisClass.students allObjects] objectAtIndex:self.selected.row];
+        self.selected = NULL;
     }
 }
 
