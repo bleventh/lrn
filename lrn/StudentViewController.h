@@ -18,5 +18,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *parentInfo;
 
 @property (weak, nonatomic) Student *student;
-
+@property (weak, nonatomic) NSIndexPath *selected;
 @end

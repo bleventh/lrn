@@ -204,11 +204,32 @@
                         <outlet property="rosterTable" destination="rnm-3r-1ck" id="cJ9-YM-uhi"/>
                         <outlet property="studentImage" destination="Nq2-R4-rSV" id="WCg-Cd-5r9"/>
                         <outlet property="studentName" destination="Zfo-S5-isH" id="Rd8-RT-GCm"/>
+                        <segue destination="O21-2g-W0h" kind="push" identifier="deckSelected" id="G2z-wG-OQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTs-NB-sVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3603" y="149"/>
+        </scene>
+        <!--Deck Quiz View Controller-->
+        <scene sceneID="mlm-0C-y7D">
+            <objects>
+                <viewController id="O21-2g-W0h" customClass="DeckQuizViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FlF-S8-Dtc"/>
+                        <viewControllerLayoutGuide type="bottom" id="aUP-C0-UMT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZM-fE-Ft8">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bNE-lz-eQ4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjm-P9-sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4962" y="335"/>
         </scene>
         <!--New Class View Controller-->
         <scene sceneID="4RI-yV-gtl">
@@ -408,36 +429,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyH-Gw-2Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3684" y="-982"/>
-        </scene>
-        <!--Quiz View Controller-->
-        <scene sceneID="rlV-HI-4Xn">
-            <objects>
-                <viewController id="TVU-Tm-PBc" customClass="QuizViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fzu-U2-RpN"/>
-                        <viewControllerLayoutGuide type="bottom" id="hd4-ZQ-mI1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VLX-Ia-SMg">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-dc-Rsd">
-                                <rect key="frame" x="234" y="362" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="card" destination="IWm-dc-Rsd" id="NjV-Mo-oVu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XAE-CA-NEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="LVf-bX-EGD"/>
-            </objects>
-            <point key="canvasLocation" x="639" y="-2330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f5f-hw-kIE">

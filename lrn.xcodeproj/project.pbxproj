@@ -14,6 +14,7 @@
 		88D52A921813D07300E36A7F /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A911813D07300E36A7F /* AddStudentViewController.m */; };
 		88D52A95181466C500E36A7F /* HorizontalRosterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */; };
 		88D52A9818147AC700E36A7F /* DeckBuilderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */; };
+		88D52A9B18148D9D00E36A7F /* DeckQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */; };
 		CA53547218137BAA00EBC3D7 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547118137BAA00EBC3D7 /* Deck.m */; };
 		CA53547518137BAB00EBC3D7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547418137BAB00EBC3D7 /* Student.m */; };
 		CA53547818137BAB00EBC3D7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547718137BAB00EBC3D7 /* Card.m */; };
@@ -36,7 +37,6 @@
 		CA8AA62418133A7C00202CDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA8AA62218133A7C00202CDE /* InfoPlist.strings */; };
 		CA8AA62618133A7C00202CDE /* lrnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA62518133A7C00202CDE /* lrnTests.m */; };
 		CA8AA6311813499A00202CDE /* Classes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA6301813499A00202CDE /* Classes.m */; };
-		CA8AA634181356C700202CDE /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA633181356C700202CDE /* QuizViewController.m */; };
 		CA8AA6371813740300202CDE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA6351813740300202CDE /* Model.xcdatamodeld */; };
 		CAA81767181444B700668989 /* NewClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA81766181444B700668989 /* NewClassViewController.m */; };
 		CAA8176A18144D3B00668989 /* AppStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA8176918144D3B00668989 /* AppStateInfo.m */; };
@@ -68,6 +68,8 @@
 		88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalRosterTableCell.m; sourceTree = "<group>"; };
 		88D52A9618147AC700E36A7F /* DeckBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckBuilderViewController.h; sourceTree = "<group>"; };
 		88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckBuilderViewController.m; sourceTree = "<group>"; };
+		88D52A9918148D9D00E36A7F /* DeckQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckQuizViewController.h; sourceTree = "<group>"; };
+		88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckQuizViewController.m; sourceTree = "<group>"; };
 		CA53547018137BAA00EBC3D7 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		CA53547118137BAA00EBC3D7 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		CA53547318137BAB00EBC3D7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -103,8 +105,6 @@
 		CA8AA62518133A7C00202CDE /* lrnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lrnTests.m; sourceTree = "<group>"; };
 		CA8AA62F1813499A00202CDE /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
 		CA8AA6301813499A00202CDE /* Classes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classes.m; sourceTree = "<group>"; };
-		CA8AA632181356C700202CDE /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
-		CA8AA633181356C700202CDE /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		CA8AA6361813740300202CDE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CAA81765181444B700668989 /* NewClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClassViewController.h; sourceTree = "<group>"; };
 		CAA81766181444B700668989 /* NewClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClassViewController.m; sourceTree = "<group>"; };
@@ -189,8 +189,6 @@
 				CA8AA6301813499A00202CDE /* Classes.m */,
 				CA8AA60F18133A7B00202CDE /* ViewController.h */,
 				CA8AA61018133A7B00202CDE /* ViewController.m */,
-				CA8AA632181356C700202CDE /* QuizViewController.h */,
-				CA8AA633181356C700202CDE /* QuizViewController.m */,
 				CA8AA61218133A7B00202CDE /* Images.xcassets */,
 				CA8AA60918133A7B00202CDE /* AppDelegate.h */,
 				CA8AA60A18133A7B00202CDE /* AppDelegate.m */,
@@ -217,6 +215,8 @@
 				88D52A94181466C500E36A7F /* HorizontalRosterTableCell.m */,
 				88D52A9618147AC700E36A7F /* DeckBuilderViewController.h */,
 				88D52A9718147AC700E36A7F /* DeckBuilderViewController.m */,
+				88D52A9918148D9D00E36A7F /* DeckQuizViewController.h */,
+				88D52A9A18148D9D00E36A7F /* DeckQuizViewController.m */,
 			);
 			path = lrn;
 			sourceTree = "<group>";
@@ -352,7 +352,6 @@
 				88D52A8F1813C64D00E36A7F /* StudentCollectionViewCell.m in Sources */,
 				CA53547218137BAA00EBC3D7 /* Deck.m in Sources */,
 				88D52A9818147AC700E36A7F /* DeckBuilderViewController.m in Sources */,
-				CA8AA634181356C700202CDE /* QuizViewController.m in Sources */,
 				CA53547B18137BAB00EBC3D7 /* ClassSch.m in Sources */,
 				CA53547518137BAB00EBC3D7 /* Student.m in Sources */,
 				CA5354871813A8E100EBC3D7 /* HorizonalTableView.m in Sources */,
@@ -367,6 +366,7 @@
 				CA53547E181391E700EBC3D7 /* HorizontalTableCell.m in Sources */,
 				CAA81767181444B700668989 /* NewClassViewController.m in Sources */,
 				88D52A82181396B900E36A7F /* StudentViewController.m in Sources */,
+				88D52A9B18148D9D00E36A7F /* DeckQuizViewController.m in Sources */,
 				CA8AA6371813740300202CDE /* Model.xcdatamodeld in Sources */,
 				88D52A8B1813BB3100E36A7F /* RosterViewController.m in Sources */,
 				CAA81770181470BF00668989 /* bouncyCollectionLayout.m in Sources */,

@@ -9,6 +9,7 @@
 #import "StudentViewController.h"
 #import "StudentQuizResultCell.h"
 #import "HorizontalRosterTableCell.h"
+#import "DeckQuizViewController.h"
 #import "Deck.h"
 #import "ClassSch.h"
 
@@ -70,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.quizTable) {
-        return 10;
+        return [[self.student.relationship.decks allObjects] count];
     } else {
         return [[self.student.relationship.students allObjects] count];
     }
@@ -80,16 +81,12 @@
 {
     if (tableView == self.quizTable) {
         StudentQuizResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuizOverview"];
-        if (indexPath.row % 2) {
-            cell.quizName.text = @"Letters"; //[[self.quizzes objectAtIndex:indexPath.row] valueForKey:@"name"];
-            cell.quizProgress.progress = 0.60;
-            cell.quizPercent.text = @"60%";
-        } else {
-            cell.quizName.text = @"Animals";
-            cell.quizProgress.progress = .98;
-            cell.quizPercent.text = @"98%";
-        }
-        return cell;
+        
+        Deck *adeck = [[self.student.relationship.decks allObjects] objectAtIndex:indexPath.row];
+        
+        cell.quizName.text = adeck.name;
+        cell.quizProgress.progress = .98;
+        cell.quizPercent.text = @"98%";        return cell;
     } else {
         HorizontalRosterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HorizontalRoster"];
         //cell.textLabel.text = @"Hello!";
@@ -110,16 +107,29 @@
 {
 
     if (tableView == self.quizTable) {
-        
+        self.selected = indexPath;
+        [self performSegueWithIdentifier:@"deckSelected" sender:self];
     } else {
         // This is where we get the name of the class and switch to appropriate view
         self.student = [[self.student.relationship.students allObjects] objectAtIndex:indexPath.row];
         [self updateStudentView];
+        [self.quizTable reloadData];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Let's only assume we're going to segue to the roster view if we
+    // have a destination selected.
+    if (self.selected) {
+        DeckQuizViewController *cv = segue.destinationViewController;
+        //cv.thisStudent = [[self.thisClass.students allObjects] objectAtIndex:self.selected.row];
+        cv.thisStudent = self.student;
+        cv.thisDeck = [[self.student.relationship.decks allObjects] objectAtIndex:self.selected.row];
+        self.selected = NULL;
+    }
+}
 
 
 @end
