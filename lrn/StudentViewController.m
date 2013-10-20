@@ -31,7 +31,9 @@
     [self.quizTable setSeparatorColor:[UIColor whiteColor]];
     
 	// Do any additional setup after loading the view.
-    self.title = self.studentName.text = @"Gwen Stacy";
+    self.title = self.studentName.text = [NSString stringWithFormat:@"%@ %@", self.student.firstName, self.student.lastName];
+    
+    //NSLog(@"student %@\n", self.student);
     
     // Make the image round
     CALayer *l = [self.studentImage layer];

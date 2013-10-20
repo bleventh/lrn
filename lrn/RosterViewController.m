@@ -8,6 +8,7 @@
 
 #import "RosterViewController.h"
 #import "StudentCollectionViewCell.h"
+#import "StudentViewController.h"
 
 @interface RosterViewController ()
 
@@ -75,6 +76,25 @@
     Student *thisOne = [[self.thisClass.students allObjects] objectAtIndex:indexPath.row];
     studentCell.studentName.text = [NSString stringWithFormat:@"%@ %@", thisOne.firstName, thisOne.lastName];
     return studentCell;
+}
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selected = indexPath;
+    [self performSegueWithIdentifier:@"studentSelected" sender:self];
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Let's only assume we're going to segue to the roster view if we
+    // have a destination selected.
+    if (self.selected) {
+        StudentViewController *cv = segue.destinationViewController;
+        cv.student = [[self.thisClass.students allObjects] objectAtIndex:self.selected.row];
+    }
 }
 
 @end

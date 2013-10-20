@@ -35,16 +35,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npy-pR-2JZ">
-                                <rect key="frame" x="757" y="383" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gwen Stacy">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OKv-z0-T5o" kind="push" id="Hdw-gQ-N90"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -181,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTs-NB-sVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-577" y="889"/>
+            <point key="canvasLocation" x="2519" y="809"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -289,11 +279,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="studentCollection" destination="ii6-cq-i1a" id="ebq-lQ-dYJ"/>
+                        <segue destination="OKv-z0-T5o" kind="push" identifier="studentSelected" id="x9e-f1-1ZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s8-K7-x2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843" y="681"/>
+            <point key="canvasLocation" x="1995" y="-283"/>
         </scene>
         <!--Add Student View Controller-->
         <scene sceneID="6oJ-PK-7y2">
@@ -313,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyH-Gw-2Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3100" y="501"/>
+            <point key="canvasLocation" x="3156" y="-243"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="rlV-HI-4Xn">

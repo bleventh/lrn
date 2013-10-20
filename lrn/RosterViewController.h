@@ -17,5 +17,6 @@
 
 @property (nonatomic, weak) ClassSch *thisClass;
 @property (nonatomic, weak) NSArray *students;
+@property (nonatomic, strong) NSIndexPath *selected;
 
 @end
