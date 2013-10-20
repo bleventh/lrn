@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "Student.h"
 #import "ClassSch.h"
+#import "bouncyCollectionLayout.h"
 
 @interface RosterViewController ()
 
@@ -34,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+   self.studentCollection.collectionViewLayout = [[bouncyCollectionLayout alloc] init];
+   [self.studentCollection reloadData];
     self.studentCollection.backgroundColor = [UIColor whiteColor];
     self.title = self.thisClass.name;
    [AppStateInfo setCurrentClass:self.thisClass.name];

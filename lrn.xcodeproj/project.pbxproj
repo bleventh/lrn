@@ -39,6 +39,7 @@
 		CA8AA6371813740300202CDE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA8AA6351813740300202CDE /* Model.xcdatamodeld */; };
 		CAA81767181444B700668989 /* NewClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA81766181444B700668989 /* NewClassViewController.m */; };
 		CAA8176A18144D3B00668989 /* AppStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA8176918144D3B00668989 /* AppStateInfo.m */; };
+		CAA81770181470BF00668989 /* bouncyCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA8176F181470BF00668989 /* bouncyCollectionLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		CAA81766181444B700668989 /* NewClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClassViewController.m; sourceTree = "<group>"; };
 		CAA8176818144D3B00668989 /* AppStateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStateInfo.h; sourceTree = "<group>"; };
 		CAA8176918144D3B00668989 /* AppStateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStateInfo.m; sourceTree = "<group>"; };
+		CAA8176E181470BF00668989 /* bouncyCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bouncyCollectionLayout.h; path = ../bouncyCollectionLayout.h; sourceTree = "<group>"; };
+		CAA8176F181470BF00668989 /* bouncyCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bouncyCollectionLayout.m; path = ../bouncyCollectionLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,8 @@
 				88D52A81181396B900E36A7F /* StudentViewController.m */,
 				88D52A8318139DB100E36A7F /* StudentQuizResultCell.h */,
 				88D52A8418139DB100E36A7F /* StudentQuizResultCell.m */,
+				CAA8176E181470BF00668989 /* bouncyCollectionLayout.h */,
+				CAA8176F181470BF00668989 /* bouncyCollectionLayout.m */,
 				88D52A891813BB3100E36A7F /* RosterViewController.h */,
 				88D52A8A1813BB3100E36A7F /* RosterViewController.m */,
 				CAA8176818144D3B00668989 /* AppStateInfo.h */,
@@ -358,6 +363,7 @@
 				88D52A82181396B900E36A7F /* StudentViewController.m in Sources */,
 				CA8AA6371813740300202CDE /* Model.xcdatamodeld in Sources */,
 				88D52A8B1813BB3100E36A7F /* RosterViewController.m in Sources */,
+				CAA81770181470BF00668989 /* bouncyCollectionLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
