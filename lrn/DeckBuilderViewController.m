@@ -8,6 +8,7 @@
 
 #import "DeckBuilderViewController.h"
 #import "HorizontalRosterTableCell.h"
+#import "AppDelegate.h"
 
 @interface DeckBuilderViewController ()
 
@@ -33,6 +34,8 @@
     CALayer *l = [self.cardImage layer];
     [l setMasksToBounds:YES];
     [l setCornerRadius:131.5];
+    
+    [self.deckTable setSeparatorColor:[UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"There are %d cards\n", [[self.thisDeck.cards allObjects] count]);
     return [[self.thisDeck.cards allObjects] count];
 }
 
@@ -79,5 +83,22 @@
 
 - (IBAction)saveCard:(id)sender {
     
+    AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [ad managedObjectContext];
+
+    Card *acard = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
+    acard.text = self.cardText.text = self.cardTextBox.text;
+    acard.id = @(1);
+
+    [self.thisDeck addCardsObject:acard];
+
+    NSError *error = nil;
+    if ([context save:&error]) {
+        NSLog(@"The save was successful!");
+    } else {
+        NSLog(@"The save wasn't successful: %@", [error userInfo]);
+    }
+    
+    [self.deckTable reloadData];
 }
 @end

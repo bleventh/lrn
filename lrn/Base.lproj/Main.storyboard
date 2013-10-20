@@ -523,6 +523,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tj1-XH-YK9" id="b0N-DY-ppf"/>
+                                    <outlet property="delegate" destination="Tj1-XH-YK9" id="3WF-js-Caf"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alY-j1-dos">
                                 <rect key="frame" x="379" y="315" width="297" height="30"/>

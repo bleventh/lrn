@@ -51,6 +51,8 @@
         NSLog([NSString stringWithFormat:@"%@ %@", student.firstName, student.lastName]);
     }
      */
+    
+    [self createDeckIfNone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -134,7 +136,7 @@
         } else {
             // We need a new one.
             dbv.thisDeck = NULL;
-            NSLog(@"It needs to be made.\n");
+            NSLog(@"The deck needs to be made. Prompt the user here with a modal(?) for the deck name.\n");
         }
         
         self.selected = NULL;
@@ -149,4 +151,33 @@
 - (IBAction)rosterSwitchChanged:(id)sender {
     [self.studentCollection reloadData];
 }
+
+- (void)createDeckIfNone
+{
+    if (![[self.thisClass.decks allObjects] count]) {
+        // There isn't a deck.
+        NSLog(@"No deck!");
+        
+      
+        AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [ad managedObjectContext];
+        
+        Deck *adeck = [NSEntityDescription insertNewObjectForEntityForName:@"Deck" inManagedObjectContext:context];
+        adeck.name = @"Poké-deck";
+        adeck.id = @(1);
+        
+        
+        [self.thisClass addDecksObject:adeck];
+        
+        NSError *error = nil;
+        if ([context save:&error]) {
+            NSLog(@"The save was successful!");
+        } else {
+            NSLog(@"The save wasn't successful: %@", [error userInfo]);
+        }
+    } else {
+        NSLog(@"There is at least one deck. Cool.");
+    }
+}
+
 @end
