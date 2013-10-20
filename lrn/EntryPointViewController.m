@@ -40,6 +40,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+   self.classPickTableView.delegate = self;
+   self.classPickTableView.dataSource = self;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
 
    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
    NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -48,15 +54,13 @@
    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ClassSch"
                                              inManagedObjectContext:context];
    [fetchRequest setEntity:entity];
-    //[fetchRequest valueForKey:@"students"];
+   //[fetchRequest valueForKey:@"students"];
    NSError *error = nil;
    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
 
    self.classes = fetchedObjects;
 
-   self.classPickTableView.delegate = self;
-   self.classPickTableView.dataSource = self;
-
+   [self.classPickTableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

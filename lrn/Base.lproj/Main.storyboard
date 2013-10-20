@@ -39,11 +39,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ih2-4X-hIM"/>
+                    <navigationItem key="navigationItem" id="ih2-4X-hIM">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="En2-zu-3FA">
+                            <connections>
+                                <segue destination="dbZ-IW-h0X" kind="push" id="oYn-q6-rXP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="classPickTableView" destination="H8J-YM-z46" id="eQS-Pq-N5i"/>
-                        <segue destination="BYZ-38-t0r" kind="push" id="5O1-9B-pMe"/>
                         <segue destination="Urj-hF-loZ" kind="push" identifier="classSelected" id="bKF-lL-xf2"/>
                     </connections>
                 </viewController>
@@ -173,43 +178,47 @@
             </objects>
             <point key="canvasLocation" x="2519" y="809"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--New Class View Controller-->
+        <scene sceneID="4RI-yV-gtl">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="dbZ-IW-h0X" customClass="NewClassViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JpU-WR-ceE"/>
-                        <viewControllerLayoutGuide type="bottom" id="CNA-kz-EQh"/>
+                        <viewControllerLayoutGuide type="top" id="0AP-ZG-CK8"/>
+                        <viewControllerLayoutGuide type="bottom" id="nYi-DZ-Eae"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="f83-dU-YqE">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A student goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUB-Lk-E2X">
-                                <rect key="frame" x="424" y="290" width="176" height="188"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpJ-if-6R9">
+                                <rect key="frame" x="422" y="200" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Add New Class">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewClass:" destination="dbZ-IW-h0X" eventType="touchUpInside" id="4N6-wk-UY3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Class Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-Vn-Gbo">
+                                <rect key="frame" x="404" y="369" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EBH-Vz-aA6">
-                        <barButtonItem key="rightBarButtonItem" title="Classes" id="dlz-Dd-aKR">
-                            <connections>
-                                <action selector="popOverMenu:" destination="BYZ-38-t0r" id="DRV-FG-IlL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="n2o-aR-LRn"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="studentTest" destination="rUB-Lk-E2X" id="0Xy-Qx-ZLT"/>
+                        <outlet property="classNameTextField" destination="hfe-Vn-Gbo" id="anm-nj-t2c"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Si-wl-X5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2289" y="-1344"/>
+            <point key="canvasLocation" x="1830" y="-1689"/>
         </scene>
         <!--Roster View Controller-->
         <scene sceneID="tGz-DS-yMk">
@@ -342,7 +351,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAE-CA-NEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="LVf-bX-EGD"/>
             </objects>
-            <point key="canvasLocation" x="911" y="-1662"/>
+            <point key="canvasLocation" x="639" y="-2330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f5f-hw-kIE">
