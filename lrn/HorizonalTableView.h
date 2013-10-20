@@ -1,5 +1,5 @@
 //
-//  MainClassViewController.h
+//  HorizonalTableView.h
 //  lrn
 //
 //  Created by Brandon Leventhal on 10/19/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainClassViewController : UITableViewController
+@interface HorizonalTableView : UITableView
 
 @end

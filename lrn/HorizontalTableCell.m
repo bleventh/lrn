@@ -10,42 +10,33 @@
 
 @implementation HorizontalTableCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+/*- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
     }
     return self;
-}
+}*/
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    [super setSelected:selected animated:animated];
+   assert([aDecoder isKindOfClass:[NSCoder class]]);
 
-    // Configure the view for the selected state
-}
+   self = [super initWithCoder:aDecoder];
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-   return [self.articles count];
-}
+   if (self) {
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-   static NSString *cellIdentifier = @"ArticleCell";
+      CGFloat k90DegreesClockwiseAngle = (CGFloat) (90 * M_PI / 180.0);
 
-   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
-   if (cell == nil)
-   {
-      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+      self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, k90DegreesClockwiseAngle);
    }
 
-   cell.textLabel.text = @"The title of the cell in the table within the table :O";
-
-   return cell;
+   assert(self);
+   return self;
 }
+
+
 
 
 

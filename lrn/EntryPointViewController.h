@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EntryPointViewController : UIViewController
-
+@interface EntryPointViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end

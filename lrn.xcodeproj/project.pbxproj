@@ -12,8 +12,8 @@
 		CA53547818137BAB00EBC3D7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547718137BAB00EBC3D7 /* Card.m */; };
 		CA53547B18137BAB00EBC3D7 /* ClassSch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547A18137BAB00EBC3D7 /* ClassSch.m */; };
 		CA53547E181391E700EBC3D7 /* HorizontalTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547D181391E700EBC3D7 /* HorizontalTableCell.m */; };
-		CA5354811813933900EBC3D7 /* MainClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5354801813933900EBC3D7 /* MainClassViewController.m */; };
 		CA5354841813954D00EBC3D7 /* EntryPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5354831813954D00EBC3D7 /* EntryPointViewController.m */; };
+		CA5354871813A8E100EBC3D7 /* HorizonalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5354861813A8E100EBC3D7 /* HorizonalTableView.m */; };
 		CA8AA5FB18133A7B00202CDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8AA5FA18133A7B00202CDE /* Foundation.framework */; };
 		CA8AA5FD18133A7B00202CDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8AA5FC18133A7B00202CDE /* CoreGraphics.framework */; };
 		CA8AA5FF18133A7B00202CDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8AA5FE18133A7B00202CDE /* UIKit.framework */; };
@@ -54,10 +54,10 @@
 		CA53547A18137BAB00EBC3D7 /* ClassSch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassSch.m; sourceTree = "<group>"; };
 		CA53547C181391E700EBC3D7 /* HorizontalTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalTableCell.h; sourceTree = "<group>"; };
 		CA53547D181391E700EBC3D7 /* HorizontalTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalTableCell.m; sourceTree = "<group>"; };
-		CA53547F1813933900EBC3D7 /* MainClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainClassViewController.h; path = ../MainClassViewController.h; sourceTree = "<group>"; };
-		CA5354801813933900EBC3D7 /* MainClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainClassViewController.m; path = ../MainClassViewController.m; sourceTree = "<group>"; };
 		CA5354821813954D00EBC3D7 /* EntryPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryPointViewController.h; sourceTree = "<group>"; };
 		CA5354831813954D00EBC3D7 /* EntryPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryPointViewController.m; sourceTree = "<group>"; };
+		CA5354851813A8E100EBC3D7 /* HorizonalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableView.h; sourceTree = "<group>"; };
+		CA5354861813A8E100EBC3D7 /* HorizonalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableView.m; sourceTree = "<group>"; };
 		CA8AA5F718133A7B00202CDE /* lrn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lrn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8AA5FA18133A7B00202CDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA8AA5FC18133A7B00202CDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,9 +141,9 @@
 		CA8AA60018133A7B00202CDE /* lrn */ = {
 			isa = PBXGroup;
 			children = (
-				CA53547F1813933900EBC3D7 /* MainClassViewController.h */,
-				CA5354801813933900EBC3D7 /* MainClassViewController.m */,
 				CA5354821813954D00EBC3D7 /* EntryPointViewController.h */,
+				CA5354851813A8E100EBC3D7 /* HorizonalTableView.h */,
+				CA5354861813A8E100EBC3D7 /* HorizonalTableView.m */,
 				CA5354831813954D00EBC3D7 /* EntryPointViewController.m */,
 				CA8AA62F1813499A00202CDE /* Classes.h */,
 				CA53547918137BAB00EBC3D7 /* ClassSch.h */,
@@ -299,10 +299,10 @@
 			files = (
 				CA8AA61118133A7B00202CDE /* ViewController.m in Sources */,
 				CA53547218137BAA00EBC3D7 /* Deck.m in Sources */,
-				CA5354811813933900EBC3D7 /* MainClassViewController.m in Sources */,
 				CA8AA634181356C700202CDE /* QuizViewController.m in Sources */,
 				CA53547B18137BAB00EBC3D7 /* ClassSch.m in Sources */,
 				CA53547518137BAB00EBC3D7 /* Student.m in Sources */,
+				CA5354871813A8E100EBC3D7 /* HorizonalTableView.m in Sources */,
 				CA8AA60B18133A7B00202CDE /* AppDelegate.m in Sources */,
 				CA5354841813954D00EBC3D7 /* EntryPointViewController.m in Sources */,
 				CA53547818137BAB00EBC3D7 /* Card.m in Sources */,

@@ -8,13 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HorizontalTableCell : UITableViewCell <UITableViewDelegate, UITableViewDataSource>
-{
-   UITableView *_horizontalTableView;
-   NSArray *_articles;
-}
+@interface HorizontalTableCell : UITableViewCell
 
-@property (nonatomic, retain) UITableView *horizontalTableView;
-@property (nonatomic, retain) NSArray *articles;
 
 @end
