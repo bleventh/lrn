@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ClassSch.h"
+#import "Student.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *studentTest;
 @property (strong, nonatomic) Classes *classPicker;
 @property (strong, nonatomic) UIPopoverController *classPopOver;
 @end
@@ -21,6 +25,20 @@
 {
    
     [super viewDidLoad];
+   AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+   NSManagedObjectContext *context = [appDelegate managedObjectContext];
+
+   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+   NSEntityDescription *entity = [NSEntityDescription entityForName:@"ClassSch"
+                                             inManagedObjectContext:context];
+   [fetchRequest setEntity:entity];
+   NSError *error = nil;
+   NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+   for (ClassSch *class in fetchedObjects) {
+      for (Student *student in class.students) {
+         self.studentTest.text = [NSString stringWithFormat:@"%@ %@", student.firstName, student.lastName];
+      }
+   }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
