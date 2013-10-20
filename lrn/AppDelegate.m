@@ -52,12 +52,12 @@
 
    NSManagedObjectContext *context = [self managedObjectContext];
    ClassSch *newClasses = [NSEntityDescription insertNewObjectForEntityForName:@"ClassSch" inManagedObjectContext:context];
-   newClasses.name = @"KinderGarden";
+   newClasses.name = @"Troubled Youth";
    newClasses.id = @(1);
 
    Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:context];
-   student.firstName = @"Scott";
-   student.lastName = @"Vanderlind";
+   student.firstName = @"Brandon";
+   student.lastName = @"Leventhal";
 
    [newClasses addStudentsObject:student];
 

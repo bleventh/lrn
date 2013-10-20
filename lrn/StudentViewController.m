@@ -38,7 +38,7 @@
     [l setMasksToBounds:YES];
     [l setCornerRadius:131.5];
     
-    [self.studentImage setImage:[UIImage imageNamed:@"gwenStacy.jpg"]];
+    //[self.studentImage setImage:[UIImage imageNamed:@"gwenStacy.jpg"]];
 }
 
 - (void)didReceiveMemoryWarning

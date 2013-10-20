@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ClassSch.h"
 
 @interface HorizontalTableCell : UITableViewCell
 
+@property (nonatomic, weak) ClassSch *thisClass;
 
 @end

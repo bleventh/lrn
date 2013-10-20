@@ -9,11 +9,18 @@
 #import "EntryPointViewController.h"
 #import "ClassSch.h"
 #import "AppDelegate.h"
+#import "RosterViewController.h"
+#import "HorizontalTableCell.h"
+
 
 @interface EntryPointViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *classPickTableView;
 
-@property (weak, nonatomic) NSArray * classes;
+// This is strong because we keep using it.
+@property (strong, nonatomic) NSArray * classes;
+
+// The segue destination
+@property (weak, nonatomic) NSIndexPath *selected;
 @end
 
 @implementation EntryPointViewController
@@ -40,20 +47,23 @@
    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ClassSch"
                                              inManagedObjectContext:context];
    [fetchRequest setEntity:entity];
+    //[fetchRequest valueForKey:@"students"];
    NSError *error = nil;
    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-
 
    self.classes = fetchedObjects;
 
    self.classPickTableView.delegate = self;
    self.classPickTableView.dataSource = self;
 
+    // TODO: Why is this here? it should be in the init of the horizontal table view.
    const CGFloat k90DegreesCounterClockwiseAngle = (CGFloat) -(90 * M_PI / 180.0);
 
    CGRect frame = self.classPickTableView.frame;
    self.classPickTableView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, k90DegreesCounterClockwiseAngle);
    self.classPickTableView.frame = frame;
+    
+    // This, too.
    [self.classPickTableView setShowsHorizontalScrollIndicator:NO];
    [self.classPickTableView setShowsVerticalScrollIndicator:NO];
 
@@ -71,29 +81,53 @@
 
    // Return the number of rows in the section.
    return [self.classes count];
+    //return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   static NSString *CellIdentifier = @"horizontalCell";
+    
+    ClassSch *class = [self.classes objectAtIndex:indexPath.row];
+    
+    static NSString *CellIdentifier = @"horizontalCell";
 
-   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    HorizontalTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-   if (cell == nil)
-   {
-      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-   }
+    cell.textLabel.text = class.name;
+    cell.thisClass = class;
+    //NSLog(@"Class %@\n", class);
 
-   cell.textLabel.text = @"";
-
-   return cell;
+    return cell;
 }
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-   const float kHardCodedRowHeight = 150.0f;
+   const float kHardCodedRowHeight = 300.0f;
    return kHardCodedRowHeight;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // This is where we get the name of the class and switch to appropriate view
+    self.selected = indexPath;
+    //NSLog(@"Index is %ld\n", (long)self.selected.row);
+    [self performSegueWithIdentifier:@"classSelected" sender:self];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Let's only assume we're going to segue to the roster view if we
+    // have a destination selected.
+    if (self.selected) {
+        RosterViewController *cv = segue.destinationViewController;
+        cv.thisClass = [self.classes objectAtIndex:self.selected.row];
+    }
 }
 
 
