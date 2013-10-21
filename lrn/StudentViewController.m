@@ -85,8 +85,8 @@
         Deck *adeck = [[self.student.relationship.decks allObjects] objectAtIndex:indexPath.row];
         
         cell.quizName.text = adeck.name;
-        cell.quizProgress.progress = .98;
-        cell.quizPercent.text = @"98%";        return cell;
+        cell.quizProgress.progress = .0;
+        cell.quizPercent.text = @"0%";        return cell;
     } else {
         HorizontalRosterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HorizontalRoster"];
         //cell.textLabel.text = @"Hello!";

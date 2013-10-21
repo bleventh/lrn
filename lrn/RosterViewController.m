@@ -52,7 +52,7 @@
     }
      */
     
-    [self createDeckIfNone];
+    //[self createDeckIfNone];
 }
 
 - (void)didReceiveMemoryWarning
