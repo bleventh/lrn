@@ -97,7 +97,7 @@
     } else {
         if (indexPath.row == [[self.thisClass.decks allObjects] count]) {
             studentCell.studentName.text = @"New deck...";
-            [studentCell.studentImage setImage:[UIImage imageNamed: @"deck.png"]];
+            [studentCell.studentImage setImage:[UIImage imageNamed: @"new_creator.png"]];
         } else {
             Deck *thisOne = [[self.thisClass.decks allObjects] objectAtIndex:indexPath.row];
             studentCell.studentName.text = thisOne.name;

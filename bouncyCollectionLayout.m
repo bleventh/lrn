@@ -23,9 +23,9 @@
 -(id)init {
    if (!(self = [super init])) return nil;
 
-   self.minimumInteritemSpacing = 50;
-   self.minimumLineSpacing = 10;
-   self.itemSize = CGSizeMake(400, 200);
+   self.minimumInteritemSpacing = 0;
+   self.minimumLineSpacing = 0;
+   self.itemSize = CGSizeMake(470, 150);
    self.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
 
    self.dynamicAnimator = [[UIDynamicAnimator alloc] initWithCollectionViewLayout:self];

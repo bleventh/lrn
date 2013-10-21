@@ -23,6 +23,7 @@
 		88D52AA81814AD5B00E36A7F /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D52AA31814AD5B00E36A7F /* user.png */; };
 		88D52AAF1814ED2D00E36A7F /* lighthouse_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D52AAD1814ED2D00E36A7F /* lighthouse_launch.png */; };
 		88D52AB01814ED2D00E36A7F /* deck.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D52AAE1814ED2D00E36A7F /* deck.png */; };
+		88D52AB21814F6A100E36A7F /* new_creator.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D52AB11814F6A100E36A7F /* new_creator.png */; };
 		CA53547218137BAA00EBC3D7 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547118137BAA00EBC3D7 /* Deck.m */; };
 		CA53547518137BAB00EBC3D7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547418137BAB00EBC3D7 /* Student.m */; };
 		CA53547818137BAB00EBC3D7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53547718137BAB00EBC3D7 /* Card.m */; };
@@ -87,6 +88,7 @@
 		88D52AA31814AD5B00E36A7F /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		88D52AAD1814ED2D00E36A7F /* lighthouse_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighthouse_launch.png; sourceTree = "<group>"; };
 		88D52AAE1814ED2D00E36A7F /* deck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deck.png; sourceTree = "<group>"; };
+		88D52AB11814F6A100E36A7F /* new_creator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_creator.png; sourceTree = "<group>"; };
 		CA53547018137BAA00EBC3D7 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		CA53547118137BAA00EBC3D7 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		CA53547318137BAB00EBC3D7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				88D52A9F1814AD5B00E36A7F /* group.png */,
+				88D52AB11814F6A100E36A7F /* new_creator.png */,
 				88D52AA01814AD5B00E36A7F /* mail.png */,
 				88D52AAD1814ED2D00E36A7F /* lighthouse_launch.png */,
 				88D52AAE1814ED2D00E36A7F /* deck.png */,
@@ -354,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D52AB21814F6A100E36A7F /* new_creator.png in Resources */,
 				88D52AA61814AD5B00E36A7F /* right.png in Resources */,
 				CA8AA61318133A7B00202CDE /* Images.xcassets in Resources */,
 				88D52AA81814AD5B00E36A7F /* user.png in Resources */,
