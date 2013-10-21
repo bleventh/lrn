@@ -112,9 +112,56 @@
     if (self.rosterSwitch.selectedSegmentIndex == 0) {
         [self performSegueWithIdentifier:@"studentSelected" sender:self];
     } else {
-        [self performSegueWithIdentifier:@"deckSelected" sender:self];
+        if ( [[self.thisClass.decks allObjects] count] > self.selected.row ) {
+            [self performSegueWithIdentifier:@"deckSelected" sender:self];
+        } else {
+            // We need a new one.
+            NSLog(@"Add button was pressed..\n");
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New deck"
+                                                            message:@"Type a name for your new deck..."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"Ok", nil];
+            
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            
+            [alert show];
+            
+        }
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    self.selected = NULL;
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 1) {
+        NSString *deckName = [[alertView textFieldAtIndex:0] text];
+        //NSLog(@"TextField contents:%@",[[alertView textFieldAtIndex:0] text]);
+        
+        
+        AppDelegate *ad = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [ad managedObjectContext];
+        
+        Deck *adeck = [NSEntityDescription insertNewObjectForEntityForName:@"Deck" inManagedObjectContext:context];
+        adeck.name = deckName;
+        adeck.id = @(1);
+        
+        [self.thisClass addDecksObject:adeck];
+        
+        NSError *error = nil;
+        if ([context save:&error]) {
+            NSLog(@"The save was successful!");
+        } else {
+            NSLog(@"The save wasn't successful: %@", [error userInfo]);
+        }
+        
+        [self.studentCollection reloadData];
+        
+    }
+    // [[alertView textFieldAtIndex:0] text]
 }
 
 
@@ -133,13 +180,9 @@
             // It exists.
             NSLog(@"It exists already.\n");
             dbv.thisDeck = [[self.thisClass.decks allObjects] objectAtIndex:self.selected.row];
-        } else {
-            // We need a new one.
-            dbv.thisDeck = NULL;
-            NSLog(@"The deck needs to be made. Prompt the user here with a modal(?) for the deck name.\n");
         }
         
-        self.selected = NULL;
+        //self.selected = NULL;
     }
 }
 
