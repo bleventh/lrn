@@ -31,6 +31,8 @@
 	// Do any additional setup after loading the view.
     self.title = self.thisDeck.name;
     
+    [self.cardImage setImage:[UIImage imageNamed: @"deck.png"]];
+    
     CALayer *l = [self.cardImage layer];
     [l setMasksToBounds:YES];
     [l setCornerRadius:131.5];
@@ -69,6 +71,7 @@
     //ClassSch *c = self.student.relationship;
     Card *s = [[self.thisDeck.cards allObjects] objectAtIndex:indexPath.row];
     cell.studentName.text = s.text;
+    [cell.studentImage setImage:[UIImage imageNamed: @"deck.png"]];
 
     return cell;
 

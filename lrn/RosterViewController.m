@@ -93,12 +93,15 @@
     if (self.rosterSwitch.selectedSegmentIndex == 0) {
         Student *thisOne = [[self.thisClass.students allObjects] objectAtIndex:indexPath.row];
         studentCell.studentName.text = [NSString stringWithFormat:@"%@ %@", thisOne.firstName, thisOne.lastName];
+        [studentCell.studentImage setImage:[UIImage imageNamed: @"user.png"]];
     } else {
         if (indexPath.row == [[self.thisClass.decks allObjects] count]) {
             studentCell.studentName.text = @"New deck...";
+            [studentCell.studentImage setImage:[UIImage imageNamed: @"deck.png"]];
         } else {
             Deck *thisOne = [[self.thisClass.decks allObjects] objectAtIndex:indexPath.row];
             studentCell.studentName.text = thisOne.name;
+            [studentCell.studentImage setImage:[UIImage imageNamed: @"deck.png"]];
         }
     }
     
