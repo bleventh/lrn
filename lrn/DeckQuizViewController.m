@@ -9,9 +9,13 @@
 #import "DeckQuizViewController.h"
 #import "Card.h"
 
+
+
 @interface DeckQuizViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *cardLabel;
 @property int index;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
 
 @end
 
@@ -29,9 +33,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   CALayer *l = [self.rightButton layer];
+   [l setMasksToBounds:YES];
+   [l setCornerRadius:50];
+   l = [self.leftButton layer];
+   [l setMasksToBounds:YES];
+   [l setCornerRadius:50];
+
+   self.cardLabel.layer.borderColor = [UIColor blackColor].CGColor;
+   self.cardLabel.layer.borderWidth = 3.0;
+
    self.index = 0;
    self.cardLabel.text = ((Card *)[[self.thisDeck.cards allObjects] objectAtIndex:self.index]).text;
-
+   self.title = self.thisDeck.name;
 	// Do any additional setup after loading the view.
     NSLog(@"I am %@ and my deck is %@\n", self.thisStudent.firstName, self.thisDeck.name);
 }

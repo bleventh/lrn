@@ -97,6 +97,7 @@
 		CA5354831813954D00EBC3D7 /* EntryPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryPointViewController.m; sourceTree = "<group>"; };
 		CA5354851813A8E100EBC3D7 /* HorizonalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableView.h; sourceTree = "<group>"; };
 		CA5354861813A8E100EBC3D7 /* HorizonalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableView.m; sourceTree = "<group>"; };
+		CA6C36E91814E98B006DBA99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CA8AA5F718133A7B00202CDE /* lrn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lrn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8AA5FA18133A7B00202CDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA8AA5FC18133A7B00202CDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +174,7 @@
 		CA8AA5F918133A7B00202CDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA6C36E91814E98B006DBA99 /* QuartzCore.framework */,
 				CA8AA5FA18133A7B00202CDE /* Foundation.framework */,
 				CA8AA5FC18133A7B00202CDE /* CoreGraphics.framework */,
 				CA8AA5FE18133A7B00202CDE /* UIKit.framework */,
