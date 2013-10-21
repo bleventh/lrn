@@ -12,6 +12,7 @@
 #import "RosterViewController.h"
 #import "HorizontalTableCell.h"
 #import "HorizonalTableView.h"
+#import "HorizontalClassCell.h"
 
 
 @interface EntryPointViewController ()
@@ -83,13 +84,17 @@
     
     ClassSch *class = [self.classes objectAtIndex:indexPath.row];
     
-    static NSString *CellIdentifier = @"horizontalCell";
+    static NSString *CellIdentifier = @"classCell";
 
-    HorizontalTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    HorizontalClassCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    cell.textLabel.text = class.name;
+    cell.classLabel.text = class.name;
     cell.thisClass = class;
     //NSLog(@"Class %@\n", class);
+    
+    CALayer *l = [cell.classImage layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:100];
 
     return cell;
 }
